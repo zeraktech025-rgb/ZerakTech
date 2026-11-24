@@ -168,8 +168,7 @@ footer{background:#0b1222;border-top:1px solid var(--line);padding:28px max(5vw,
     <div>
       <span class="badge"><i></i>ئامادەین بۆ پرۆژەی نوێ</span>
       <h1>ئێمە <span>زیرەک تێک</span>ین</h1>
-      <p class="tag">عبدالرحمن فاضل و هێنەر طارق · دیڤلۆپەرانی وێب و ئەپ</p>
-      <p>تیمێکی دوو کەسین و پێکەوە سیستەمی ڕاستەقینە دروست دەکەین: ماڵپەڕ، داشبۆرد و ئەپی مۆبایل کە بە یەک داتابەیس دەبەسترێنەوە.</p>
+      <p>ئێمە وەک ستافی زیرەک تێک ئامادەین بۆ دروستکردنی سیستەمی ڕاستەقینە، ماڵپەڕ و ئەپی مۆبایل کە بە یەک داتابەیس دەبەسترێنەوە.</p>
       <div class="btns">
         <a class="btn main" href="#works">کارەکانمان ببینە</a>
         <a class="btn ghost" href="https://wa.me/9647709950499">واتسئاپ</a>
@@ -296,8 +295,8 @@ footer{background:#0b1222;border-top:1px solid var(--line);padding:28px max(5vw,
   };
   const works = [
     {t:"ڕێبەر",k:"web",kl:"ماڵپەڕ",a:"map",d:"دۆزینەوەی ڕێگا لە نێوان شارەکانی هەرێمی کوردستان بە BFS و Dijkstra. ماڵپەڕێکی شێوە-ئەپە و لەسەر GitHub Pages بڵاوکراوەتەوە.",tags:["JavaScript","BFS","Dijkstra"],links:[["بینینی ڕاستەوخۆ","https://abdrahman1h.github.io/rebar/"],["کۆد","https://github.com/abdrahman1h/rebar"]]},
-    {t:"سیستەمی بەڕێوەبردنی خوێندکاران",k:"sys",kl:"سیستەم",a:"dash",d:"داشبۆرد بۆ خوێندکار، مامۆستا، سەرۆکی بەش، ڕاگرایەتی و ئەدمین، لەگەڵ کتێبخانە و ڕۆڵ و ئاسایشی بەرز.",tags:["HTML/CSS/JS","PHP","MySQL"],links:[]},
-    {t:"ئەپی سیستەمی خوێندکاران",k:"app",kl:"ئەپ",a:"phone",d:"وەشانی مۆبایلی سیستەمی خوێندکاران بە Flutter، بەستراو بە هەمان داتابەیسی ماڵپەڕەکە.",tags:["Flutter","Dart","MySQL"],links:[]},
+    {t:"سیستەمی بەڕێوەبردنی خوێندکاران",k:"sys",kl:"سیستەم",a:"dash",d:"داشبۆرد بۆ خوێندکار، مامۆستا، سەرۆکی بەش، ڕاگرایەتی و ئەدمین، لەگەڵ کتێبخانە و ڕۆڵ و ئاسایشی بەرز.",tags:["HTML/CSS/JS","PHP","MySQL"],links:[["بینینی ڕاستەوخۆ","https://garmian-server1.vercel.app/"]]},
+    {t:"ئەپی سیستەمی خوێندکاران",k:"app",kl:"ئەپ",a:"phone",d:"وەشانی مۆبایلی سیستەمی خوێندکاران بە Flutter، بەستراو بە هەمان داتابەیسی ماڵپەڕەکە.",tags:["Flutter","Dart","MySQL"],links:[["دابەزاندنی ئەپ (APK)","https://github.com/zeraktech025-rgb/ZerakTech/releases/latest/download/app-release.apk"]]},
     {t:"سیستەمی بازاڕ",k:"sys",kl:"سیستەم",a:"pos",d:"فرۆشتن، کۆگا و کڕین: کڕیار و قەرز، گەڕانەوە، کاڵای تێکچوو، بەسەرچوونی بەروار و باکئەپی خۆکار.",tags:["POS","Database","Backup"],links:[]}
   ];
   const list = document.getElementById("workList");
@@ -306,7 +305,7 @@ footer{background:#0b1222;border-top:1px solid var(--line);padding:28px max(5vw,
       <article class="card">
         <div class="thumb">${art[w.a]}<span class="kind">${w.kl}</span></div>
         <div class="body"><h3>${w.t}</h3><p>${w.d}</p>
-          ${w.links.length?`<div class="links">${w.links.map(l=>`<a href="${l[1]}">${l[0]} ←</a>`).join("")}</div>`:""}
+          ${w.links.length?`<div class="links">${w.links.map(l=>`<a href="${l[1]}" ${l[1].endsWith(".apk")?"download":"target=\"_blank\" rel=\"noopener\""}>${l[0]} ←</a>`).join("")}</div>`:""}
           <div class="tags">${w.tags.map(t=>`<span>${t}</span>`).join("")}</div></div>
       </article>`).join("");
   };
